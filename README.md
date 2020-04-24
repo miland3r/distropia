@@ -5,16 +5,17 @@ with configuration for the relevant gpu(s) passed through, cpu pinning
 configuration and sound server setup.
 
 
--- Requirements --
+## Requirements
+You need Qt5 and CMake 3.5 or later.
 
-You need Qt5 and CMake 2.8.11 or higher
 
-
--- Build instructions --
-
-git clone https://github.com/miland3r/distropia.git ./distropia 
+# Building from Source
+<details><summary>Linux</summary>
+```
+git clone https://github.com/miland3r/distropia.git ./distropia
 cd ./distropia/build
 cmake ../
 make
-
 ./distropia
+```
+</details>
