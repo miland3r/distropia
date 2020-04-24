@@ -1,0 +1,8 @@
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/install/strip.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/install/local.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/edit_cache.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/distropia.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/rebuild_cache.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/list_install_components.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/install.dir
+/nibiru/grid/array_05/projects/pr0sys/distropia/build/CMakeFiles/distropia_autogen.dir
