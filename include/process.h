@@ -20,37 +20,37 @@
  */
 
 /**
- * @file distropia.h
- * @brief Header defining main set of methods available from frontend.
+ * @file process.h
+ * @brief Header defining set of methods allowing us to call QProcess from qml.
  * @author Ulrich van Brakel <ulrich.vanbrakel@gmail.com>
  */
 
-#include <QObject>
+#include <QProcess>
+#include <QVariant>
 
-#include <fstream>
-#include <iostream>
-#include <pugixml.hpp>
-#include <stdio.h> 
-#include <string>
-#include <unistd.h> 
-#include <vector>
-
-#define PORT 9100 
-#define NS_INADDRSZ  4
-#define NS_IN6ADDRSZ 16
-#define NS_INT16SZ   2
-                         
-class Distropia : public QObject {
+class Process : public QProcess {
     Q_OBJECT
-public:
-    explicit Distropia(QObject *parent = 0);
-    qint16 offset;
-    qint16 size;
-    
-public slots:
-    bool validateIP(QString address);
-    bool updateFirmware(QString address);
 
-private:
-    bool isValidTarget(const std::string& ipadress);
+public:
+    Process(QObject *parent = 0) : QProcess(parent) { }
+
+    Q_INVOKABLE void start(const QString &program, const QVariantList &arguments) {
+        QStringList args;
+
+        // convert QVariantList from QML to QStringList for QProcess 
+        for (int i = 0; i < arguments.length(); i++)
+            args << arguments[i].toString();
+
+        QProcess::start(program, args);
+    }
+
+    Q_INVOKABLE QByteArray readAll() {
+        return QProcess::readAll();
+    }
+    
+    Q_INVOKABLE QString readAsString() {
+        QByteArray data = QProcess::readAll();
+        return QString(data).trimmed();
+    }
+    
 };

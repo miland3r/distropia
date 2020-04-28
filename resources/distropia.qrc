@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+ <qresource prefix="/resources">
+     
+    <file alias="main.qml">qml/main.qml</file>
+    <file alias="libvirt-logo">images/libvirt-logo.png</file>
+    <file alias="libvirt-logo-small">images/libvirt-logo-small.png</file>
+    
+ </qresource>
+</RCC>
